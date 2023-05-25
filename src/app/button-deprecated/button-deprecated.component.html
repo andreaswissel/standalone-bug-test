@@ -1,0 +1,12 @@
+<div *ngIf="icon && !spinner" class="icon" [class.ani-clock]="icon === 'clock'">
+  <app-icon
+    *ngIf="icon && icon !== 'clock' && type !== 'outline'"
+    [iconName]="icon"
+  ></app-icon>
+
+  <app-icon *ngIf="icon && type === 'outline'" [iconName]="icon"></app-icon>
+</div>
+<ng-content *ngIf="!spinner && !(iconOnMobile && isMobile)"></ng-content>
+<div *ngIf="spinner" class="spinner">
+  <i class="fas fa-circle-notch fa-spin"></i>
+</div>

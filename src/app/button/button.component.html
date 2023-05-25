@@ -1,0 +1,9 @@
+<button [disabled]="disabled" [attr.class]="buttonClasses">
+  <app-icon
+    *ngIf="icon"
+    [iconName]="icon"
+    [iconStyle]="'fas'"
+    [iconColor]="iconColor"
+  ></app-icon>
+  {{ label }}
+</button>
